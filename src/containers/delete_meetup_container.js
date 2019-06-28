@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { deleteMeetupItem } from '../actions';
+import { deleteMeetupItem,meetupListAll } from '../actions';
  
 class DeleteContainer extends Component {
-    delMeetup = (props) => (
-        props.deleteMeetupItem(props.id)
-    )
+    delMeetup = async (props) => {
+        await props.deleteMeetupItem(props.id)
+        props.meetupListAll()
+    }
     render() { 
-        // console.log(this.props)
         return (
             <div
                 style={{
@@ -29,7 +29,6 @@ class DeleteContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-    // console.log(state.meetupList.meetupList)
     return {
         allmeetups: state.meetupList.meetupList
     }
@@ -37,7 +36,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
-        deleteMeetupItem
+        deleteMeetupItem,meetupListAll
     },dispatch)
 }
  

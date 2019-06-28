@@ -5,6 +5,8 @@ export default function(state={},action){
             return {...state,meetupList:action.payload}
         case 'GET_SINGLE_MEETUP':
             return {...state,meetupItem:action.payload}
+        case 'GET_SINGLE_MEETUPS_FAILURE':
+            return {...state,meetupItem:action.payload}
         default:
             return state;
     }

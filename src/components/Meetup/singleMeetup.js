@@ -1,7 +1,6 @@
 import React from 'react';
 
 const DisplayMeetup = (props) => {
-    console.log(props.mtp)
     const renderMeetup = (meetup) => (
         meetup ? meetup.map((item)=>(
             <div key={item.id}>

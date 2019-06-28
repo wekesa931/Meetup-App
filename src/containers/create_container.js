@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import { createMeetupItem,meetupListAll } from '../actions';
 
-class CreateContainer extends Component {
+export class CreateContainer extends Component {
     createMeetupItem = async (mtp,props) => {
         await props.createMeetupItem(mtp)
         props.meetupListAll()

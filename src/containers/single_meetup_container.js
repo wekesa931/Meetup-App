@@ -6,7 +6,7 @@ import DisplayMeetup from '../components/Meetup/singleMeetup';
 import { singleMeetupItem } from '../actions';
 
 
-class SingleMeetup extends Component {
+export class SingleMeetup extends Component {
     componentWillMount(){
         this.props.singleMeetupItem(this.props.match.params.id)
     }
