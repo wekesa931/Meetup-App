@@ -35,7 +35,7 @@ export function singleMeetupItem (id) {
         .catch(err => {
           dispatch({
             type: 'GET_ALGET_SINGLE_MEETUPL_MEETUPS',
-            payload: "An error has occured fetching the random number"
+            payload: "An error has occured!"
           });
         });
     };
@@ -54,7 +54,7 @@ export function createMeetupItem (meetup) {
         .catch(err => {
           dispatch({
             type: 'GET_SINGLE_MEETUPS_FAILURE',
-            payload: "An error has occured fetching the random number"
+            payload: "An error has occured!"
           });
         });
     };
@@ -74,7 +74,7 @@ export function deleteMeetupItem (id) {
         .catch(err => {
           dispatch({
             type: 'DELETE_MEETUP',
-            payload: "An error has occured fetching the random number"
+            payload: "An error has occured!"
           });
         });
     };
